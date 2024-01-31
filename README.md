@@ -1,4 +1,4 @@
-# MyApp
+# Convertidor numeros romanos-arabigos
 
 This application allows you to convert Roman numerals ("NR") to decimal Arabic numerals and decimals to Roman numerals, it can correctly express Arabic numerals in Roman numerals up to the digit three thousand nine hundred ninety nine million nine hundred ninety nine thousand nine hundred ninety nine with a horizontal line above representing that the base of the multiplication is by one thousand and one million if there are two lines. The text field on the left is for entering the "NR" multiplied by one thousand that you wish to convert to decimal Arabic numerals and its entry is also represented with a horizontal line above it. The application is configured to detect misspelled "NR" and its representation is erased from the text field as it can be entering more than three consecutive entries of the same number of type one (example: "IIII") or trying to represent "NR" type five by subtracting it from a number of higher value (example: "VX"). The app supports English and Spanish languages.
 
