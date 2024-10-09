@@ -1,0 +1,242 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+span {
+  font-size: 24px;
+}
+
+form > span {
+  display: none;
+}
+
+#date_hour {
+  display: flex;
+  justify-content: space-between;
+  height: 0px;
+  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Chrome and Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#romanNumber {
+  height: 34px;
+  background-color: #e7eaeb; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  width: auto;
+  min-width: 310px;
+  font-size: 30px;
+  margin-bottom: 25px;
+  display: block;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 25px;
+  box-shadow: rgba(60,64,67,0.3) 0px 1px 2px 0px, rgba(60,64,67,0.15) 0px 2px 6px 2px;
+}
+
+#romanNumber:focus {
+  outline: none;
+}
+
+#romanNumber::before {
+  content: attr(data-before);
+  text-decoration: overline
+}
+
+button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100%at 100%0,#5adaff 0,#5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45,35,66,.4)0 2px 4px,rgba(45,35,66,.3)0 7px 13px -3px,rgba(58,65,111,.5)0-3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+form > button:first-of-type {
+  min-width: 250px;
+}
+
+button:hover {
+  box-shadow: rgba(45,35,66,.4)0 4px 8px,rgba(45,35,66,.3)0 7px 13px -3px,#3c4fe0 0-3px 0 inset;
+  transform: translateY(-2px)
+}
+
+button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px)
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  height: auto;
+  place-content: center
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #377c39;
+}
+
+.overline {
+  text-decoration: overline;
+}
+
+div {
+  height: 80px;
+}
+
+div:nth-of-type(2) {
+  line-height: 80px;
+}
+
+#text {
+  font-size: 20px;
+}
+
+#only {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 100px 0px 100px
+}
+
+h2 {
+  font-family: Ubuntu, sans-serif;
+  margin: 0px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: red;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px red;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#checkbox {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+  height: 70px;
+}
+
+span > p:first-child {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-right: 8px;
+  color: #2196f3
+}
+
+span > p:last-child {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 8px;
+  color: red
+}
+
+.margintext {
+  margin-left: 3px;
+}
+
+.line-before::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  border-top: 2px solid black;
+}

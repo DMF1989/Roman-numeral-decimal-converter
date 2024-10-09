@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de números romanos</title>
+  </head>
+  <body>
+    <div id="date_hour">
+    <span ondblclick="hourformat()" onclick="decimalHourToggle()"></span>
+    <span id="date" onclick="decimalDateToggle()"></span>
+    </div>
+    <form>
+      <span for="romanNumber"></span>
+      <div contenteditable="true" id="romanNumber">
+      </div>
+      <button type="button" onclick="result()">
+      </button>
+      <div id="fullAnswer"><span id="thousandsText"></span><span id="result"></span></div>
+    </form>
+    <div id ='only'></div>
+    <div class="grid-container">
+      <button class="button" onclick="cambiarValor('I')"><span class="overline">I</span></button>
+      <button class="button" onclick="cambiarValor('V')"><span class="overline">V</span></button>
+      <button class="button" onclick="cambiarValor('X')"><span class="overline">X</span></button>
+      <button class="button" onclick="cambiarValor('L')"><span class="overline">L</span></button>
+      <button class="button" onclick="cambiarValor('C')"><span class="overline">C</span></button>
+      <button class="button" onclick="cambiarValor('D')"><span class="overline">D</span></button>
+      <button class="button" onclick="cambiarValor('M')"><span class="overline">M</span></button>
+      <button class="button" onclick="borrarUltimaLetra()">⌫</button>
+      <button class="button" onclick="eraseAll()">AC</button>
+    </div>
+    <span id ='checkbox'>
+      <p>Español</p>
+      <label class="switch">
+        <input type="checkbox" display="none" id="lang">
+        <span class="slider round"></span>
+      </label>
+      <p>English</p>
+      </span>
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="result.js"></script>
+    <script type="text/javascript" src="lingua&datum.js"></script>
+  </body>
+</html>
